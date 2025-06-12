@@ -1,0 +1,13 @@
+from topicmanager.topic_top_score import TopicTopScore
+from topicmanager.file_writer import write_line_to_file 
+
+class TopicScoreWriter:
+    def __init__(self, write_line=None):  
+        if write_line is None:
+            write_line = write_line_to_file
+        self.write_line = write_line
+
+    def write_scores(self, top_scores):
+        for tts in top_scores:
+            data_to_write = f"{tts.get_topic_name()}, {tts.get_top_score()}"
+            self.write_line(data_to_write)
