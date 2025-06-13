@@ -10,6 +10,6 @@ class TopicManager:
 
         top_scores = []
         for ts in topic_scores_list:
-            top_score = self.highest_number_finder.find_highest_number(ts.get_scores())
-            top_scores.append(TopicTopScore(ts.get_topic_name(), top_score))
+            top_score = self.highest_number_finder.find_highest_number(ts.scores)
+            top_scores.append(TopicTopScore(ts.topic_name, top_score))
         return top_scores
