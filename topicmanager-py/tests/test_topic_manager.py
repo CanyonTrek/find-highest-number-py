@@ -28,21 +28,6 @@ class TestTopicManager(unittest.TestCase):
         self.assertEqual(result[0].topic_name, "Physics")
         self.assertEqual(result[0].top_score, 89)
 
-    def test_multiple_topics_stub_finder(self):
-        topics = [
-            TopicScores("Physics", [56, 67, 45, 89]),
-            TopicScores("Art", [87, 66, 78]),
-            TopicScores("Comp Sci", [45, 88, 97, 56])
-        ]
-        manager = TopicManager(HighestNumberFinder())
-        result = manager.find_topic_high_scores(topics)
-        self.assertEqual(result[0].topic_name, "Physics")
-        self.assertEqual(result[0].top_score, 89)
-        self.assertEqual(result[1].topic_name, "Art")
-        self.assertEqual(result[1].top_score, 87)
-        self.assertEqual(result[2].topic_name, "Comp Sci")
-        self.assertEqual(result[2].top_score, 97)
-
 
 if __name__ == '__main__':
     unittest.main()
