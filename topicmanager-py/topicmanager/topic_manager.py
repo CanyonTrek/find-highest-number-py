@@ -6,4 +6,4 @@ class TopicManager:
         self.highest_number_finder = HighesNumberFinder()
 
     def find_topic_high_scores(self, topic):
-        return TopiceTopScore(topic.get_topic_name(), topic.get_score())
+        return TopiceTopScore(topic.topic_name, topic.get_score())
