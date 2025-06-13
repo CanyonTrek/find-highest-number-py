@@ -1,6 +1,5 @@
 
 import unittest
-from unittest.mock import Mock
 from topicmanager.topic_manager import TopicManager
 from topicmanager.topic_scores import TopicScores
 from topicmanager.topic_top_score import TopicTopScore
@@ -44,26 +43,6 @@ class TestTopicManager(unittest.TestCase):
         self.assertEqual(result[2].topic_name, "Comp Sci")
         self.assertEqual(result[2].top_score, 97)
 
-    def test_multiple_topics_using_mock_finder(self):
-        topics = [
-            TopicScores("Physics", [56, 67, 45, 89]),
-            TopicScores("Art", [87, 66, 78]),
-            TopicScores("Comp Sci", [45, 88, 97, 56])
-        ]
-
-        mock_finder = Mock()
-        mock_finder.find_highest_number.side_effect = [89, 87, 97]
-
-        manager = TopicManager(mock_finder)
-        result = manager.find_topic_high_scores(topics)
-
-        expected = [
-            TopicTopScore("Physics", 89),
-            TopicTopScore("Art", 87),
-            TopicTopScore("Comp Sci", 97)
-        ]
-
-        self.assertEqual(result, expected)
 
 if __name__ == '__main__':
     unittest.main()

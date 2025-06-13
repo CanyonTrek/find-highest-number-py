@@ -9,9 +9,3 @@ class TopicTopScore:
     def get_top_score(self):
         return self.top_score
 
-    def __eq__(self, other):
-        return (
-            isinstance(other, TopicTopScore) and
-            self.topic_name.lower() == other.topic_name.lower() and
-            self.top_score == other.top_score
-        )
