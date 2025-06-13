@@ -40,6 +40,15 @@ topicmanager-py/
 
 Each Git tag represents an important step in the TDD journey. See [`HISTORY.md`](HISTORY.md) for full detail.
 
+## 📈 Walkthrough Tag Progression
+TDD Walkthrough Tag History
+
+v2.0  →  v2.1  →  v2.2  →  v2.3  →  v2.4  →  v2.5  →  v2.6  →  v2.7
+Init     Real     Stub     Stub     Mock     Writer   Writes   Final
+impl     impl     test     limits   added    hard     real     design
+                          shown              coded    score
+
+
 ---
 
 ## 🧪 Running Tests
