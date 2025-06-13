@@ -15,15 +15,7 @@ class TestTopicManager(unittest.TestCase):
     def test_single_topic_returns_correct_top_score(self):
         scores = [56, 67, 45, 89]
         topics = [TopicScores("Physics", scores)]
-        manager = TopicManager(HighestNumberFinder())
-        result = manager.find_topic_high_scores(topics)
-        self.assertEqual(result[0].topic_name, "Physics")
-        self.assertEqual(result[0].top_score, 89)
-
-    def test_stub_finder_returns_correct_top_score(self):
-        scores = [56, 67, 45, 89]
-        topics = [TopicScores("Physics", scores)]
-        manager = TopicManager(HighestNumberFinder())
+        manager = TopicManager()
         result = manager.find_topic_high_scores(topics)
         self.assertEqual(result[0].topic_name, "Physics")
         self.assertEqual(result[0].top_score, 89)
