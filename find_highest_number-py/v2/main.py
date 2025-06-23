@@ -1,4 +1,4 @@
-from highest_number_finder import HighestNumberFinder
+from app.highest_number_finder import HighestNumberFinder
 
 def main():
     finder = HighestNumberFinder()

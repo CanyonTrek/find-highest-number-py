@@ -1,5 +1,5 @@
 import unittest
-from ..app.highest_number_finder import HighestNumberFinder
+from app.highest_number_finder import HighestNumberFinder
 
 class TestHighestNumberFinder(unittest.TestCase):
 
